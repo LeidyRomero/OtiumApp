@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ofertas',
+    'login',
+    'formulario',
+    'registro',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +80,12 @@ WSGI_APPLICATION = 'OtiumApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'otium_db',
+        'USER': 'otium_admin',
+        'PASSWORD' : 'admin12345',
+        'HOST': '3.95.217.172',
+        'PORT' : '8000'
     }
 }
 
