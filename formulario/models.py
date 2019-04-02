@@ -1,6 +1,5 @@
 from django.db import models
-import formulario
-from django_postgres_extensions.models.fields import ArrayField
+from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 class Formulario(models.Model):
