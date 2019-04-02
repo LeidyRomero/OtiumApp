@@ -84,8 +84,8 @@ DATABASES = {
         'NAME': 'otium_db',
         'USER': 'otium_admin',
         'PASSWORD' : 'admin12345',
-        'HOST': '3.95.217.172',
-        'PORT' : '8000'
+        'HOST': 'localhost',
+        'PORT' : ''
     }
 }
 
