@@ -9,13 +9,11 @@ class Formulario(models.Model):
     habilidadesBlandas = ArrayField(models.ForeignKey(HabilidadBlanda, on_delete=models.CASCADE, related_name='nombre_habilidad'))
 
 class Materia(models.Model):
-    class Meta:
-        nombre = models.charField(max_length = 64)
+    nombre = models.charField(max_length = 64)
 
 
 
 
 class HabilidadBlanda(models.Model):
-    class Meta:
-        nombre = models.charField(max_length = 64)
+    nombre = models.charField(max_length = 64)
 
