@@ -10,13 +10,13 @@ class Formulario(models.Model):
 
 class Materia(models.Model):
     class Meta:
-        unique =(nombre)
+        unique_together =(('nombre','formulario'),)
     nombre = models.CharField(max_length=64)
     formulario = models.ForeignKey(Formulario,on_delete = models.CASCADE, related_name = 'materia_formulario')
 
 
 class HabilidadBlanda(models.Model):
     class Meta:
-        unique =(nombre)
+        unique_together =(('nombre','formulario'),)
     nombre = models.CharField(max_length=64)
     formulario = models.ForeignKey(Formulario, on_delete=models.CASCADE, related_name='habilidad_formulario')
