@@ -1,6 +1,5 @@
-from django.db import models
 from django import forms
-
+from formulario import forms
 # Create your models here.
 #
 class Usuario(models.Model):
@@ -10,7 +9,8 @@ class Usuario(models.Model):
     email = forms.EmailField(max_length=254, help_text='Obligatorio. Inserte una dirección de correo valida.')
     universidad = forms.CharField(max_length=40, required=False, help_text='Opcional.')
     fechaNacimiento = forms.DateField(widget=forms.widgets.DateInput(format="%d/%m/%Y"))
-    contrasenia = forms.CharField(widget=forms.PasswordInput())
+    contrasenia = forms.CharField(widget=forms.PasswordInput()
+    formulario = forms.OneToOneField(Formulario, on_delete = models.CASCADE)
 
-    def __str__(self):
-        return '%s %s' % (self.value, self.unit)
+    def ___str___(self):
+        return self.username
