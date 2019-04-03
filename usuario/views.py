@@ -1,11 +1,14 @@
-from django.shortcuts import render
+import requests
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
+from .forms import registroUsuarioForm
+from django.contrib.auth.decorators import login_required
+from .models import Usuario
 
 # Create your views here.
 def registro(request):
     if request.method == 'POST':
-        form = registroForm(request.POST)
+        form = registroUsuarioForm(request.POST)
         if form.is_valid():
             form.save()
             nombres = form.cleaned_data.get('nombres')
@@ -18,10 +21,20 @@ def registro(request):
             user = authenticate(username=username, password=raw_password)
             login(request, user)
             return redirect('home')
+        else:
+            print(form.errors)
     else:
-        form = registroForm()
-    return render(request, 'registro.html', {'form': form})
+        form = registroUsuarioForm()
 
-@login_required
-def home(request):
-    return render(request, '')
+    return render(request, 'usuario.html', {'form': form})
+
+def getRole(request):
+    user = request.user
+    auth0user = user.social_auth.get(provider="auth0")
+    accessToken = auth0user.extra_data['access_token']
+    url = "https://isis2503-linkhl09.auth0.com/userinfo"
+    headers = {'authorization': 'Bearer ' + accessToken}
+    resp = requests.get(url, headers=headers)
+    userinfo = resp.json()
+    role = userinfo['https://isis2503-linkhl09:auth0:com/role']
+    return (role)
