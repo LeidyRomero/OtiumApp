@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include "navbar-sesion.html" %}
+<div style="margin-top: 60px">
+<h1>Id: {{ oferta.titulo}}</h1>
+<h1>Nombre: {{ oferta.descripcion}}</h1>
+
+{% if requerimientos %}
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<td>Nombre</td>
+		</tr>
+	</thead>
+	<tbody>
+		
+		{% for req in requerimientos %}
+		<tr>
+			<th>{{req.requerimiento}}</th>
+		</tr>
+		{% endfor %}
+		
+	</tbody>
+</table>
+{% else %}
+<h1>No hay productos asociados a este proveedor</h1>
+{% endif %}
+</div>
+{% endblock %}

@@ -16,7 +16,7 @@ class Oferta(models.Model):
 	class Meta:
 		unique_together = (('titulo','nombre'),)
 	salario = models.IntegerField()
-	titulo = models.CharField(max_length = 255)
+	titulo = models.CharField(max_length = 255, primary_key = True)
 	descripcion = models.TextField()
 	ubicacion = models.ForeignKey(Empresa, on_delete = models.CASCADE, related_name = 'ubicacion_empresa')
 	nombre = models.ForeignKey(Empresa, on_delete = models.CASCADE, related_name = 'nombre_empresa')
@@ -29,7 +29,7 @@ class Requerimiento(models.Model):
 	class Meta:
 		unique_together = (('oferta','requerimiento'),)
 	oferta = models.ForeignKey(Oferta, on_delete = models.CASCADE)
-	requerimiento = models.TextField()
+	requerimiento = models.TextField(primary_key = True)
 
 	def __str__(self):
 		return self.requerimiento

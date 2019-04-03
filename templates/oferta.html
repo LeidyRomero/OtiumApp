@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include "navbar-sesion.html" %}
+<div style="margin-top: 60px">
+{% if ofertas %}
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<td>Id</td>
+			<td>Nombre</td>
+		</tr>
+	</thead>
+	<tbody>
+		{% for ofe in ofertas %}
+			<tr>
+				<th scope="row">{{ofe.titulo}}</th>
+				<td>{{ofe.descripcon}}</td>
+			</tr>
+		{% endfor %}
+		
+		</tbody>
+</table>
+{% else %}
+	<h1>No hay ofertas</h1>
+{% endif %}
+</div>
+{% endblock %}
