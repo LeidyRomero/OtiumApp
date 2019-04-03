@@ -26,7 +26,8 @@ class registroUsuarioForm(forms.ModelForm):
             'apellidos',
             'email',
             'universidad',
-            'fechaNacimiento'
+            'fechaNacimiento',
+            'formulario'
         ]
         widgets = {
             'contrasenia': forms.PasswordInput(),
