@@ -6,6 +6,8 @@ class Formulario(models.Model):
     comentario = models.TextField(blank=True)
     materias = ArrayField(models.TextField(blank=True))
     habilidadesBlandas = ArrayField(models.TextField(blank=True))
+    materias.append("Lenguajes y Máquinas")
+    materias.append("cálculos")
 
 
 
