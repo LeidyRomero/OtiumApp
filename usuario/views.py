@@ -29,14 +29,3 @@ from .models import Usuario
     #return render(request, 'usuario.html', {'form': form})
 def index(request):
     return render(request, 'base.html')
-
-def getRole(request):
-    user = request.user
-    auth0user = user.social_auth.get(provider="auth0")
-    accessToken = auth0user.extra_data['access_token']
-    url = "https://isis2503-linkhl09.auth0.com/userinfo"
-    headers = {'authorization': 'Bearer ' + accessToken}
-    resp = requests.get(url, headers=headers)
-    userinfo = resp.json()
-    role = userinfo['https://isis2503-linkhl09:auth0:com/role']
-    return (role)

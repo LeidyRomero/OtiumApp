@@ -10,6 +10,7 @@ class Usuario(models.Model):
     email = forms.EmailField(max_length=254, help_text='Obligatorio. Inserte una dirección de correo valida.')
     universidad = forms.CharField(max_length=40, required=False, help_text='Opcional.')
     fechaNacimiento = forms.DateField(widget=forms.widgets.DateInput(format="%d/%m/%Y"))
+    contrasenia = forms.CharField(widget=forms.PasswordInput())
 
     def __str__(self):
         return '%s %s' % (self.value, self.unit)
