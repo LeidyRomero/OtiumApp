@@ -34,3 +34,11 @@ class Requerimiento(models.Model):
 	def __str__(self):
 		return self.requerimiento
 
+class Atributo(models.Model):
+	class Meta:
+		unique_together = (('oferta','nombre'),)
+	oferta = models.ForeignKey(Oferta, on_delete = models.CASCADE)
+	nombre = models.CharField(max_length = 64)
+
+	def __str__(self):
+		return self.nombre
