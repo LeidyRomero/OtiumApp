@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'ofertas',
     'login',
     'formulario',
-    'registro',
+    'usuario',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_URL = "/login/auth0"
+LOGIN_REDIRECT_URL="/"
+LOGOUT_REDIRECT_URL= "https://isis2503-linkhl09.auth0.com/v2/logout?returnTo=http%3A%2F%2F3.95.217.172:8000"
+
+SOCIAL_AUTH_TRAILING_SLASH = False # Remove end slash from routes
+SOCIAL_AUTH_AUTH0_DOMAIN = 'isis2503-linkhl09.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY = 'HtJWvfy1rBWKD4V6XE0EVaFXxe6Cvnyb'
+SOCIAL_AUTH_AUTH0_SECRET = 'w2o2tKwK6WMUlates96EWJKii-0Pdkan-aBeZhOuuDEHidRds0x9u33xpU8PTs_o'
+SOCIAL_AUTH_AUTH0_SCOPE = [
+    'openid',
+    'profile'
+]
+
+AUTHENTICATION_BACKENDS = {
+    'usuario.auth0backend.Auth0',
+    'django.contrib.auth.backends.ModelBackend',
+}
