@@ -4,16 +4,25 @@ from django.contrib.postgres.fields import ArrayField
 # Create your models here.
 class Formulario(models.Model):
     comentario = models.TextField(blank=True)
-    materias = ArrayField(models.TextField(blank=True))
-    habilidadesBlandas = ArrayField(models.TextField(blank=True))
-    materias.append("Lenguajes y Máquinas")
-    materias.append("cálculos")
+    def __str__(self):
+        return self.comentario
 
 
 
 class Materia(models.Model):
+    class Meta:
+        unique_together =(('nombre','formulario'),)
     nombre = models.CharField(max_length=64)
+    formulario = models.ForeignKey(Formulario,on_delete = models.CASCADE, related_name = 'materia_formulario', null = True )
 
+    def __str__(self):
+        return self.nombre
 
 class HabilidadBlanda(models.Model):
+    class Meta:
+        unique_together =(('nombre','formulario'),)
     nombre = models.CharField(max_length=64)
+    formulario = models.ForeignKey(Formulario, on_delete=models.CASCADE, related_name='habilidad_formulario', null = True)
+
+    def __str__(self):
+        return self.nombre
