@@ -10,8 +10,8 @@ class Formulario(models.Model):
 
 
 class Materia(models.Model):
-    nombre = models.charField(max_length=64)
+    nombre = models.CharField(max_length=64)
 
 
 class HabilidadBlanda(models.Model):
-    nombre = models.charField(max_length=64)
+    nombre = models.CharField(max_length=64)
