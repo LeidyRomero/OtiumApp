@@ -4,8 +4,8 @@ from django.contrib.postgres.fields import ArrayField
 # Create your models here.
 class Formulario(models.Model):
     comentario = models.TextField(blank=True)
-    materias = ArrayField(models.TextField)
-    habilidadesBlandas = ArrayField(models.TextField)
+    materias = ArrayField(models.TextField(blank=True))
+    habilidadesBlandas = ArrayField(models.TextField(blank=True))
 
 
 
