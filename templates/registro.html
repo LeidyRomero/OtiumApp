@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include "navbar-sesion.html" %}
+<div style="margin-top: 60px">
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    
+    <input type="submit" value="Submit">
+</form>
+</div>
+{% endblock %}

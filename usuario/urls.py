@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     url('^$' , views.index),
+    url('registro/' , views.registro),
 ]

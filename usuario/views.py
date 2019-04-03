@@ -15,7 +15,7 @@ def registro(request):
     else:
         form = registroUsuarioForm()
 
-    return render(request, 'usuario.html', {'form': form})
+    return render(request, 'registro.html', {'form': form})
 
 def index(request):
     return render(request, 'base.html')
