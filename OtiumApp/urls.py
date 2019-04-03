@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import inicio
+from .views import inicio, base_layout
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio, name='inicio'),
-    path('', include('usuario.urls')),
-    path('', include('login.urls')),
+    path('usuario/', include('usuario.urls')),
+    path('login/', include('login.urls')),
+    path('formulario/', include('formulario.urls')),
 ]
