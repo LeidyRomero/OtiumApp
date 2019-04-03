@@ -16,7 +16,6 @@ class registroUsuarioForm(forms.ModelForm):
     fechaNacimiento = forms.DateField(label='Fecha Nacimiento')
     contrasenia = forms.CharField(label='Constraseña',
                              widget=forms.TextInput(attrs={"placeholder": "Contraseña"}))
-    formulario = forms.CharField(label = 'Formulario')
 
     class Meta:
         model = Usuario
@@ -27,7 +26,6 @@ class registroUsuarioForm(forms.ModelForm):
             'email',
             'universidad',
             'fechaNacimiento',
-            'formulario'
         ]
         widgets = {
             'contrasenia': forms.PasswordInput(),

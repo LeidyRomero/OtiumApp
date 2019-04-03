@@ -10,6 +10,7 @@ def registro(request):
         if form.is_valid():
             form.save()
             form = registroUsuarioForm()
+            return redirect(requests, 'formulario.html')
         else:
             print(form.errors)
     else:

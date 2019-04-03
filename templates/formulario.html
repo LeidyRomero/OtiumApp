@@ -5,11 +5,689 @@
 <div style="margin-top: 60px">
 <form action="" method="post">
     {% csrf_token %}
-    {{ formularioForm }}
-    {{ materiasForm }}
-    {{ habilidadesForm }}
+    {{ formularioForm.as_p }}
+    {{ materiasForm.as_p }}
+    {{ habilidadesForm.as_p }}
     
-    <input type="submit" value="Submit">
+<div class="tab-pane fade active in" id="tab-visi--n-general-del-programa" style="background-color: white; font-family:'PT Sans';"><p></p>
+<h2>Visión general del programa</h2>
+<p></p>
+<p></p><div class="row-fluid " id="vis1"><div class="span2"><p></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width: 45%;"><strong>Sem.</strong></td>
+<td style="text-align: center; width: 10%;"><strong>&nbsp;-&nbsp;</strong></td>
+<td style="text-align: center; width: 45%;"><strong>Créd.</strong></td>
+</tr>
+</tbody>
+</table>
+<p></p></div><div class="span10"></div></div><p></p>
+<p></p><div class="row-fluid " id="vis2"><div class="span2"><p></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width: 45%;"><strong>I</strong></td>
+<td style="text-align: center; width: 10%;"><strong>&nbsp;-&nbsp;</strong></td>
+<td style="text-align: center; width: 45%;"><strong>16</strong></td>
+</tr>
+</tbody>
+</table>
+<p></p></div><div class="span2"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#C55A11;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m1" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Cálculo Diferencial" onclick="mostrarMateria('MATE1203')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">MATE<br>1203</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0066FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m2" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Algorítmica y Programación I" onclick="mostrarMateria('ISIS1204')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>1204</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m3" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Requisito de Español" onclick="mostrarMateria('LENG1511')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">LENG<br>1511</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m4" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Constitución y Democracia" onclick="mostrarMateria('DERE1300')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">DERE<br>1300</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m5" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Ciclo Básico Uniandino" onclick="mostrarMateria('CBCC1177')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">CBCC<br>1177</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#50BFD5;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m6" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Introducción a Ingeniería de Sistemas" onclick="mostrarMateria('ISIS1001')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>1001</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#50BFD5;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m7" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Acompañamiento ISIS" onclick="mostrarMateria('ISIS1002')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>1002</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div></div><p></p>
+<p></p><div class="row-fluid " id="vis3"><div class="span2"><p></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width: 45%;"><strong>II</strong></td>
+<td style="text-align: center; width: 10%;"><strong>&nbsp;-&nbsp;</strong></td>
+<td style="text-align: center; width: 45%;"><strong>17</strong></td>
+</tr>
+</tbody>
+</table>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#C55A11;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m8" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Fisica 1" onclick="mostrarMateria('FISI1018')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">FISI<br>1018</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#C55A11;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m9" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Física Experimental 1" onclick="mostrarMateria('FISI1019')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">FISI<br>1019</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#C55A11;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m10" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Cálculo Integral y Ecuaciones Diferenciales" onclick="mostrarMateria('MATE1214')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">MATE<br>1214</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0066FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m11" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Algorítmica y Programación II" onclick="mostrarMateria('ISIS1205')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>1205</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0066FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m12" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Matemática Estructural y Lógica" onclick="mostrarMateria('ISIS1104')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>1104</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m55" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Estructura Universitaria 2" onclick="mostrarMateria('LENG1512')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">LENG<br>1512</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span2"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m13" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Ciclo Básico Uniandino" onclick="mostrarMateria('CBU')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">CBU<br>2</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span2"><p></p>
+<p></p></div></div><p></p>
+<p></p><div class="row-fluid " id="vis4"><div class="span2"><p></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width: 45%;"><strong>III</strong></td>
+<td style="text-align: center; width: 10%;"><strong>&nbsp;-&nbsp;</strong></td>
+<td style="text-align: center; width: 45%;"><strong>16</strong></td>
+</tr>
+</tbody>
+</table>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#C55A11;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m14" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Física 2" onclick="mostrarMateria('FISI1028')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">FISI<br>1028</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#C55A11;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m15" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Física Experimental 2" onclick="mostrarMateria('FISI1029')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">FISI<br>1029</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#C55A11;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m16" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Algebra Lineal 1" onclick="mostrarMateria('MATE1105')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">MATE<br>1105</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0066FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m17" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Estructuras de Datos" onclick="mostrarMateria('ISIS1206')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>1206</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0066FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m25" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Lenguajes y Máquinas" onclick="mostrarMateria('ISIS1106')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>1106</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0066FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m19" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Fundamentos de Infraestructura Tecnológica" onclick="mostrarMateria('ISIS1304')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>1304</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#1C1C1A;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m20" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Requisito Lectura Inglés" onclick="mostrarMateria('LENG2999')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">LENG<br>2999</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p></div></div><p></p>
+<p></p><div class="row-fluid " id="vis5"><div class="span2"><p></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width: 45%;"><strong>IV</strong></td>
+<td style="text-align: center; width: 10%;"><strong>&nbsp;-&nbsp;</strong></td>
+<td style="text-align: center; width: 45%;"><strong>18</strong></td>
+</tr>
+</tbody>
+</table>
+<p></p></div><div class="span1"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#C55A11;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m22" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Biología Celular TEO o Química" onclick="mostrarMateria('MBIOQUIM')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">MBIO<br>QUIM</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#C55A11;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m23" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Cálculo Vectorial" onclick="mostrarMateria('MATE1207')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">MATE<br>1207</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0066FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m24" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="TI en las Organizaciones" onclick="mostrarMateria('ISIS1404')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>1404</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0066FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m18" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Diseño y Análisis de Algoritmos" onclick="mostrarMateria('ISIS1105')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>1105</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0066FF;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m26" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Desarrollo de SW en Equipo" onclick="mostrarMateria('ISIS2603')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>2603</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#9474BA;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m27" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Sistemas Transaccionales" onclick="mostrarMateria('ISIS2304')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>2304</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span3"><p></p>
+<p></p></div></div><p></p>
+<p></p><div class="row-fluid " id="vis6"><div class="span2"><p></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width: 45%;"><strong>V</strong></td>
+<td style="text-align: center; width: 10%;"><strong>&nbsp;-&nbsp;</strong></td>
+<td style="text-align: center; width: 45%;"><strong>18</strong></td>
+</tr>
+</tbody>
+</table>
+<p></p></div><div class="span1"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0099FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m28" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Análisis de Decisión de Inversión" onclick="mostrarMateria('IIND2401')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">IIND<br>2401</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0099FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m29" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Probabilidad y Estadística" onclick="mostrarMateria('IIND2106')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">IIND<br>2106</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#3BF4B6;color:#1C1C1A;padding:0px;border:0"><p></p>
+<table id="m30" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Arquitectura Empresarial" onclick="mostrarMateria('ISIS2403')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>2403</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#7ECCFF;color:#1C1C1A;padding:0px;border:0"><p></p>
+<table id="m31" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Infraestructura Computacional" onclick="mostrarMateria('ISIS2203')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>2203</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#97C725;color:#1C1C1A;padding:0px;border:0"><p></p>
+<table id="m32" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Arquitectura y Diseño de SW" onclick="mostrarMateria('ISIS2503')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>2503</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#50BFD5;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m33" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Diseño de Productos e Innovación en TI" onclick="mostrarMateria('ISIS2007')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>2007</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#50BFD5;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m34" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Visión ISIS" onclick="mostrarMateria('ISIS2008')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>2008</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div></div><p></p>
+<p></p><div class="row-fluid " id="vis7"><div class="span2"><p></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width: 45%;"><strong>VI</strong></td>
+<td style="text-align: center; width: 10%;"><strong>&nbsp;-&nbsp;</strong></td>
+<td style="text-align: center; width: 45%;"><strong>17</strong></td>
+</tr>
+</tbody>
+</table>
+<p></p></div><div class="span2"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#0099FF;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m35" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Electiva Regulada en otra Ingeniería" onclick="mostrarMateria('ELECING')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ELEC<br>ING</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#3BF4B6;color:#1C1C1A;padding:0px;border:0"><p></p>
+<table id="m36" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Modelado, Simulación y Optimización" onclick="mostrarMateria('ISIS3302')">
+<tbody>
+<tr>
+<td colspan="2" style="border-bottom-style: solid; border-bottom-color: #ffffff; text-align: center;">ISIS<br>3302</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#3BF4B6;color:#1C1C1A;padding:0px;border:0"><p></p>
+<table id="m37" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Sistemas Empresariales" onclick="mostrarMateria('ISIS3425')">
+<tbody>
+<tr>
+<td colspan="2" style="border-bottom-style: solid; border-bottom-color: #ffffff; text-align: center;">ISIS3425</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p><div class="sp-block rounded" style="background:#97c725;color:#1C1C1A;padding:0px;border:0"><p></p>
+<table id="m54" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Programación con Tecnologías Web" onclick="mostrarMateria('ISIS3710')">
+<tbody>
+<tr>
+<td colspan="2" style="border-bottom-style: solid; border-bottom-color: #ffffff; text-align: center;">ISIS3710</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#7ECCFF;color:#1C1C1A;padding:0px;border:0"><p></p>
+<table id="m38" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Infraestructura de Comunicaciones" onclick="mostrarMateria('ISIS3204')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>3204</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#9474BA;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m39" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Inteligencia de Negocios" onclick="mostrarMateria('ISIS3301')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>3301</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m40" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Ciclo Básico Uniandino" onclick="mostrarMateria('CBU')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">CBU<br>3</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span2"><p></p>
+<p></p></div></div><p></p>
+<p></p><div class="row-fluid " id="vis8"><div class="span2"><p></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width: 45%;"><strong>VII</strong></td>
+<td style="text-align: center; width: 10%;"><strong>&nbsp;-&nbsp;</strong></td>
+<td style="text-align: center; width: 45%;"><strong>17</strong></td>
+</tr>
+</tbody>
+</table>
+<p></p></div><div class="span2"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#C55A11;color:#FFF;padding:0px;border:0"><p></p>
+<table id="m41" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Electiva Biología, Química, Matemáticas o Física" onclick="mostrarMateria('ELECQBMF')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ELEC<br>QBMF</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#97c725;color:#1C1C1A;padding:0px;border:0"><p></p>
+<table id="m42" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Construcción de Aplicaciones Móviles" onclick="mostrarMateria('ISIS3510')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>3510</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#9A3AFF;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m43" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Electiva Profesional" onclick="mostrarMateria('ISIS3xxx')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>3xxx</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#9A3AFF;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m44" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Electiva Profesional" onclick="mostrarMateria('ISIS3xxx')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>3xxx</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m45" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Cálculo Diferencial" onclick="mostrarMateria('CLE')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">CLE<br>1</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m46" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Ciclo Básico Uniandino" onclick="mostrarMateria('CBU')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">CBU<br>4</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span2"><p></p>
+<p></p></div></div><p></p>
+<p></p><div class="row-fluid " id="vis9"><div class="span2"><p></p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width: 45%;"><strong>VIII</strong></td>
+<td style="text-align: center; width: 10%;"><strong>&nbsp;-&nbsp;</strong></td>
+<td style="text-align: center; width: 45%;"><strong>15</strong></td>
+</tr>
+</tbody>
+</table>
+<p></p></div><div class="span2"><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m56" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Curso de Libre Elección" onclick="mostrarMateria('CBU')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">CBU<br>5</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#9A3AFF;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m47" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Electiva Profesional" onclick="mostrarMateria('ISIS3xxx')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>3xxx</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m48" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Curso de Libre Elección" onclick="mostrarMateria('CLE')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">CLE<br>2</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m49" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Ciclo Básico Uniandino" onclick="mostrarMateria('CBU')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">CBU<br>6</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#B50000;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m50" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Ciclo Básico Uniandino" onclick="mostrarMateria('CBU')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">CBU<br>7</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#1C1C1A;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m51" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Requisito de Idioma Extranjero" onclick="mostrarMateria('LENG3999')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">LENG<br>3999</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#50BFD5;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m53" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Proyecto de Grado" onclick="mostrarMateria('ISIS3007')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>3007</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div><div class="span1"><p></p>
+<p></p><div class="sp-block rounded" style="background:#50BFD5;color:#FFFFFF;padding:0px;border:0"><p></p>
+<table id="m52" style="width: 100%; margin-left: auto; font-size: xx-small; line-height: 1.3em; cursor: pointer;" title="Inscripción a Grado" onclick="mostrarMateria('ISIS3990')">
+<tbody>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #ffffff;">ISIS<br>3990</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><p></p>
+<p></p></div></div><p></p>
+<p></p></div></div><p></p>
+<p></p></div></div><p></p>
+</div><p></p>
+</div><p></p>
+</div><p></p>
+</div><p></p>
+<p></p><p></p>
+<p></p></div></div><p></p>
+<p></p></div>
+	
+	<div style="display: flex; justify-content: center;">
+    <button type="submit" class="save btn btn-default" >Submit</button>
+    </div>
 </form>
-</div>
 {% endblock %}

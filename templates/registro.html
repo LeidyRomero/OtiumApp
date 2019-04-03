@@ -5,9 +5,9 @@
 <div style="margin-top: 60px">
 <form action="" method="post">
     {% csrf_token %}
-    {{ form }}
+    {{ form.as_p }}
     
-    <input type="submit" value="Submit">
+    <button type="submit" class="save btn btn-default" h="formulario/new">Siguiente</button>
 </form>
 </div>
 {% endblock %}
