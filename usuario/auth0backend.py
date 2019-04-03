@@ -6,7 +6,12 @@ class Auth0(BaseOAuth2):
     SCOPE_SEPARATOR = ' '
     ACCESS_TOKEN_METHOD = 'POST'
     EXTRA_DATA = [
-        ('picture', 'picture')
+        ('picture', 'picture'),
+        ('nombres', 'nombres'),
+        ('apellidos', 'apellidos'),
+        ('email', 'email'),
+        ('universidad', 'universidad'),
+        ('fechaNacimiento', 'fechaNacimiento')
     ]
 
     def authorization_url(self):
