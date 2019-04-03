@@ -8,4 +8,4 @@ from .models import Atributo
 admin.site.register(Empresa)
 admin.site.register(Oferta)
 admin.site.register(Requerimiento)
-admin.site.register(Atributo)
+#admin.site.register(Atributo)
